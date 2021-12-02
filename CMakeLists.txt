@@ -8,6 +8,9 @@ add_executable(advent_of_code "")
 target_sources(advent_of_code
     PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/src/helper_functions.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/src/adv_1.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/src/adv_2.cpp
     PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/include/advent_of_code.h
         ${CMAKE_CURRENT_LIST_DIR}/include/helper_functions.h
