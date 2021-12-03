@@ -21,5 +21,13 @@ int main()
   advent_of_code_2_part2();
   std::cout << "\n-------------------\n" << std::endl;
 
+  std::cout << "Day 3" << std::endl;
+  std::cout << "-----" << std::endl;
+  std::cout << "\npart 1:\n" << std::endl;
+  advent_of_code_3_part1();
+  //  std::cout << "\npart 2:\n" << std::endl;
+  //  advent_of_code_3_part2();
+  //  std::cout << "\n-------------------\n" << std::endl;
+
   return 0;
 }
