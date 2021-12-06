@@ -12,12 +12,14 @@ target_sources(advent_of_code
         ${CMAKE_CURRENT_LIST_DIR}/src/adv_1.cpp
         ${CMAKE_CURRENT_LIST_DIR}/src/adv_2.cpp
         ${CMAKE_CURRENT_LIST_DIR}/src/adv_3.cpp
+        ${CMAKE_CURRENT_LIST_DIR}/src/adv_4.cpp
     PUBLIC
         ${CMAKE_CURRENT_LIST_DIR}/include/advent_of_code.h
         ${CMAKE_CURRENT_LIST_DIR}/include/helper_functions.h
         ${CMAKE_CURRENT_LIST_DIR}/include/adv_1.h
         ${CMAKE_CURRENT_LIST_DIR}/include/adv_2.h
         ${CMAKE_CURRENT_LIST_DIR}/include/adv_3.h
+        ${CMAKE_CURRENT_LIST_DIR}/include/adv_4.h
     )
 
 target_include_directories(advent_of_code

@@ -25,9 +25,17 @@ int main()
   std::cout << "-----" << std::endl;
   std::cout << "\npart 1:\n" << std::endl;
   advent_of_code_3_part1();
-  //  std::cout << "\npart 2:\n" << std::endl;
-  //  advent_of_code_3_part2();
-  //  std::cout << "\n-------------------\n" << std::endl;
+  std::cout << "\npart 2:\n" << std::endl;
+  advent_of_code_3_part2();
+  std::cout << "\n-------------------\n" << std::endl;
+
+  std::cout << "Day 4" << std::endl;
+  std::cout << "-----" << std::endl;
+  std::cout << "\npart 1:\n" << std::endl;
+  advent_of_code_4_part1();
+  std::cout << "\npart 2:\n" << std::endl;
+  advent_of_code_4_part2();
+  std::cout << "\n-------------------\n" << std::endl;
 
   return 0;
 }
