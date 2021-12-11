@@ -6,14 +6,26 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS=ON)
 
 add_executable(advent_of_code "")
 
-aux_source_directory(${CMAKE_CURRENT_LIST_DIR}/src/ sources)
-aux_source_directory(${CMAKE_CURRENT_LIST_DIR}/include/ headers)
 
 target_sources(advent_of_code
     PRIVATE
-        ${sources}
+    ${CMAKE_CURRENT_LIST_DIR}/src/main.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/helper_functions.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/adv_1.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/adv_2.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/adv_3.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/adv_4.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/adv_5.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/adv_6.cpp
     PUBLIC
-        ${headers}
+    ${CMAKE_CURRENT_LIST_DIR}/include/advent_of_code.h
+    ${CMAKE_CURRENT_LIST_DIR}/include/helper_functions.h
+    ${CMAKE_CURRENT_LIST_DIR}/include/adv_1.h
+    ${CMAKE_CURRENT_LIST_DIR}/include/adv_2.h
+    ${CMAKE_CURRENT_LIST_DIR}/include/adv_3.h
+    ${CMAKE_CURRENT_LIST_DIR}/include/adv_4.h
+    ${CMAKE_CURRENT_LIST_DIR}/include/adv_5.h
+    ${CMAKE_CURRENT_LIST_DIR}/include/adv_6.h
     )
 
 target_include_directories(advent_of_code
