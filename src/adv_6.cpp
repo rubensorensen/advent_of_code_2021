@@ -14,12 +14,12 @@ void loadData(const char* filepath, int64_t* table)
 
 void simulateDay(int64_t* table)
 {
-    int64_t temp = table[0];
-    for (size_t i = 0; i < 6; ++i)
-        table[i] = table[i + 1];
-    table[6] = temp + table[7];
-    table[7] = table[8];
-    table[8] = temp;
+    int64_t temp{table[0]};
+    for (size_t i{0}; i < 6; ++i)
+        table[i] = {table[i + 1]};
+    table[6] = {temp + table[7]};
+    table[7] = {table[8]};
+    table[8] = {temp};
 }
 
 int64_t amountOfFish(int64_t* table)
