@@ -1,6 +1,6 @@
 #include "adv_6.h"
 
-void loadData(std::vector<int32_t>& fish, const char* filepath)
+void loadData(const char* filepath, int64_t* table)
 {
     std::fstream file;
     std::string line;
@@ -8,30 +8,46 @@ void loadData(std::vector<int32_t>& fish, const char* filepath)
     getline(file, line);
     std::stringstream ss(line);
     while (getline(ss, line, ','))
-        fish.push_back(std::stoi(line));
+        table[std::stoi(line)]++;
     file.close();
 }
 
 void advent_of_code_6_part1()
 {
-    std::vector<int32_t> fish;
-    loadData(fish, "../data/adv_6.txt");
+    int64_t table[9]{0};
+    loadData("../data/adv_6.txt", table);
+
     for (size_t i{0}; i < 80; ++i)
     {
-        int32_t newCount{0};
-        for (auto& f : fish)
-        {
-            if (f == 0)
-            {
-                ++newCount;
-                f = 7;
-            }
-            --f;
-        }
-        for (size_t j{0}; j < newCount; ++j)
-            fish.push_back(8);
+        int64_t temp = table[0];
+        for (size_t i = 0; i < 6; ++i)
+            table[i] = table[i + 1];
+        table[6] = temp + table[7];
+        table[7] = table[8];
+        table[8] = temp;
     }
-    std::cout << "Amount of fish: " << fish.size() << std::endl;
+    int64_t fish{0};
+    for (size_t i{0}; i < 9; ++i)
+        fish += table[i];
+    std::cout << "Fish: " << fish << std::endl;
 }
 
-void advent_of_code_6_part2() {}
+void advent_of_code_6_part2()
+{
+    int64_t table[9]{0};
+    loadData("../data/adv_6.txt", table);
+
+    for (size_t i{0}; i < 256; ++i)
+    {
+        int64_t temp = table[0];
+        for (size_t i = 0; i < 6; ++i)
+            table[i] = table[i + 1];
+        table[6] = temp + table[7];
+        table[7] = table[8];
+        table[8] = temp;
+    }
+    int64_t fish{0};
+    for (size_t i{0}; i < 9; ++i)
+        fish += table[i];
+    std::cout << "Fish: " << fish << std::endl;
+}
