@@ -17,6 +17,7 @@ target_sources(advent_of_code
     ${CMAKE_CURRENT_LIST_DIR}/src/adv_4.cpp
     ${CMAKE_CURRENT_LIST_DIR}/src/adv_5.cpp
     ${CMAKE_CURRENT_LIST_DIR}/src/adv_6.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/src/adv_7.cpp
     PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/include/advent_of_code.h
     ${CMAKE_CURRENT_LIST_DIR}/include/helper_functions.h
@@ -26,6 +27,7 @@ target_sources(advent_of_code
     ${CMAKE_CURRENT_LIST_DIR}/include/adv_4.h
     ${CMAKE_CURRENT_LIST_DIR}/include/adv_5.h
     ${CMAKE_CURRENT_LIST_DIR}/include/adv_6.h
+    ${CMAKE_CURRENT_LIST_DIR}/include/adv_7.h
     )
 
 target_include_directories(advent_of_code

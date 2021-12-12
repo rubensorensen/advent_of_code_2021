@@ -7,5 +7,6 @@
 #include "adv_4.h"
 #include "adv_5.h"
 #include "adv_6.h"
+#include "adv_7.h"
 
 #endif
